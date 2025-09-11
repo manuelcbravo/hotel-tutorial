@@ -1,0 +1,13 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+class Empleado extends Model
+{
+    use SoftDeletes;
+    protected $fillable = ['nombre','apellido','cargo','fecha_contratacion','telefono','email'];
+    protected $casts = ['fecha_contratacion' => 'date'];
+}
